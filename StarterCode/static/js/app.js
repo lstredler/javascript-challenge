@@ -8,16 +8,17 @@ var tableData = data;
 
 //button select 
 var tbody = d3.select("tbody");
-console.log(data);
 var button = d3.select("#button");
+var datetimeInput = d3.select("#datetime")
 var cityInput = d3.select("#city")
 var stateInput = d3.select("#state");
 var countryInput = d3.select("#country")
 var shapeInput = d3.select("#shape")
+var durationMinutesInput = d3.select("#durationMinutes");
+var comments = d3.select("#comments");
+console.log(data);
 
-
-var inputFieldDate = d3.select("#datetime");
-var $filerBtn = d3.select("#filter-btn");
+var filerBtn = d3.select("#filter-btn");
 
 var columns = ["date/time", "city", "state", "country", "shape", "comment"]
 
