@@ -9,7 +9,7 @@ var tableData = data;
 //button select 
 var tbody = d3.select("tbody");
 var button = d3.select("#button");
-var datetimeInput = d3.select("#datetime")
+var dateInput = d3.select("#datetime")
 var cityInput = d3.select("#city")
 var stateInput = d3.select("#state");
 var countryInput = d3.select("#country")
@@ -30,3 +30,5 @@ var addData = (dataInput) => {
 }
 
 addData(tableData); 
+
+renderTable();
