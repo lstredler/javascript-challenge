@@ -31,4 +31,9 @@ var addData = (dataInput) => {
 
 addData(tableData); 
 
+//prevent table from reloading
+d3.event.preventDefault();
+
+
+
 renderTable();
