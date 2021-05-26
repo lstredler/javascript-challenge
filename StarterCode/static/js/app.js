@@ -16,6 +16,11 @@ var countryInput = d3.select("#country")
 var shapeInput = d3.select("#shape")
 var durationMinutesInput = d3.select("#durationMinutes");
 var comments = d3.select("#comments");
+
+//prevent table from reloading
+d3.event.preventDefault();
+
+// Print the value to the console
 console.log(data);
 
 var filerBtn = d3.select("#filter-btn");
@@ -31,8 +36,6 @@ var addData = (dataInput) => {
 
 addData(tableData); 
 
-//prevent table from reloading
-d3.event.preventDefault();
 
 
 
