@@ -7,9 +7,8 @@ var tableData = data;
 //column for date/time, city, state, country, shape, comment
 
 //button select 
-var button = d3.select("#button");
 var tbody = d3.select("tbody");
-var dateInput = d3.select("#datetime")
+var datetimeInput = d3.select("#datetime")
 var cityInput = d3.select("#city")
 var stateInput = d3.select("#state");
 var countryInput = d3.select("#country")
@@ -22,7 +21,7 @@ console.log(data);
 
 var filerBtn = d3.select("#filter-btn");
 
-var columns = ["date/time", "city", "state", "country", "shape", "comment"]
+var columns = ["datetime", "city", "state", "country", "shape", "durationMinutes", "comments"]
 
 var addData = (dataInput) => {
     dataInput.forEach(ufoSightings =>{
@@ -33,8 +32,6 @@ var addData = (dataInput) => {
 
 
 addData(tableData); 
-
-
 
 //prevent table from reloading
 d3.event.preventDefault();
