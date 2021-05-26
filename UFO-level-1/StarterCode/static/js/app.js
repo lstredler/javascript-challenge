@@ -13,7 +13,6 @@ var countryInput = d3.select("#country");
 var shapeInput = d3.select("#shape");
 var durationMinutesInput = d3.select("#durationMinutes");
 var comments = d3.select("#comments");
-
 //column for date/time, city, state, country, shape, comment
 var columns = ["datetime", "city", "state", "country", "shape", "durationMinutes", "comments"]
 
