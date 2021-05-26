@@ -2,17 +2,14 @@
 var tableData = data;
 
 // grab references to the input element and the output div
-//write code that appends a table to your web page 
-//and then adds new rows of data for each UFO sighting.
-//column for date/time, city, state, country, shape, comment
+//write code that appends a table to your web page and then adds new rows of data for each UFO sighting.
 
-//button select 
 var tbody = d3.select("tbody");
-var datetimeInput = d3.select("#datetime")
-var cityInput = d3.select("#city")
+var datetimeInput = d3.select("#datetime");
+var cityInput = d3.select("#city");
 var stateInput = d3.select("#state");
-var countryInput = d3.select("#country")
-var shapeInput = d3.select("#shape")
+var countryInput = d3.select("#country");
+var shapeInput = d3.select("#shape");
 var durationMinutesInput = d3.select("#durationMinutes");
 var comments = d3.select("#comments");
 
@@ -21,6 +18,7 @@ console.log(data);
 
 var filerBtn = d3.select("#filter-btn");
 
+//column for date/time, city, state, country, shape, comment
 var columns = ["datetime", "city", "state", "country", "shape", "durationMinutes", "comments"]
 
 var addData = (dataInput) => {
@@ -29,10 +27,9 @@ var addData = (dataInput) => {
         columns.forEach(column => row.append("td").text(ufoSightings[column]))
     })
 }
-
-
 addData(tableData); 
 
 //prevent table from reloading
 d3.event.preventDefault();
+
 renderTable();
