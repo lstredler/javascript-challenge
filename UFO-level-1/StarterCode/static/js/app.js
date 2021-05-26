@@ -25,12 +25,20 @@ var addData = (dataInput) => {
 }
 addData(tableData); 
 
-// Print the value to the console
-console.log(data);
-
-var filerBtn = d3.select("#filter-btn");
-
-//prevent table from reloading
+//prevent refresh 
 d3.event.preventDefault();
+
+//button
+d3.selectAll("button").on("click", function() {
+    console.log(dataInput);
+  });
+  
+  d3.selectAll("li").on("click", function() {
+    var listItem = d3.select(dataInput);
+  
+    var listItemText = listItem.text();
+    console.log(listItemText);
+  });
+  
 
 renderTable();
