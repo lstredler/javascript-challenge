@@ -7,8 +7,8 @@ var tableData = data;
 //column for date/time, city, state, country, shape, comment
 
 //button select 
-var tbody = d3.select("tbody");
 var button = d3.select("#button");
+var tbody = d3.select("tbody");
 var dateInput = d3.select("#datetime")
 var cityInput = d3.select("#city")
 var stateInput = d3.select("#state");
@@ -16,9 +16,6 @@ var countryInput = d3.select("#country")
 var shapeInput = d3.select("#shape")
 var durationMinutesInput = d3.select("#durationMinutes");
 var comments = d3.select("#comments");
-
-//prevent table from reloading
-d3.event.preventDefault();
 
 // Print the value to the console
 console.log(data);
@@ -34,9 +31,11 @@ var addData = (dataInput) => {
     })
 }
 
+
 addData(tableData); 
 
 
 
-
+//prevent table from reloading
+d3.event.preventDefault();
 renderTable();
